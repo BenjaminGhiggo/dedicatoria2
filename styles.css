@@ -1,0 +1,356 @@
+/* 
+  ---------------------
+  ESTILOS GENERALES
+  ---------------------
+*/
+
+/* Fondo de la página */
+body {
+    margin: 0;
+    padding: 0;
+    background: url("fondo.jpg") no-repeat center center;
+    background-size: cover;
+    font-family: "Montserrat", sans-serif;
+    overflow-x: hidden; /* Para evitar scroll horizontal no deseado */
+  }
+  
+  /* Contenedor principal */
+  .container {
+    margin-left: 220px; /* Deja espacio para el sidebar fijo (200px + un margen) */
+    max-width: 900px;
+    padding: 20px;
+  }
+  
+  /* Oculta todas las secciones menos la activa */
+  .section {
+    display: none;
+  }
+  
+  .section.active {
+    display: block;
+  }
+  
+  /*
+    ---------------------
+    SIDEBAR
+    ---------------------
+  */
+  
+  .sidebar {
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 200px;
+    height: 100%;
+    background-color: rgba(0,0,0,0.6);
+    padding-top: 20px;
+    z-index: 999; /* Para que quede por encima de otros elementos */
+  }
+  
+  /* Estilos del menú en el sidebar */
+  .sidebar ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+  
+  .sidebar ul li {
+    margin: 15px 0;
+    text-align: center;
+  }
+  
+  .sidebar ul li a {
+    color: #ffffff;
+    text-decoration: none;
+    font-family: "Montserrat", sans-serif;
+    font-size: 18px;
+    padding: 10px 15px;
+    display: block;
+    transition: background 0.3s;
+  }
+  
+  .sidebar ul li a:hover {
+    background: #ff69b4;
+    color: #ffffff;
+    border-radius: 10px;
+  }
+  
+  /*
+    ---------------------
+    TÍTULOS Y TEXTOS
+    ---------------------
+  */
+  
+  /* Título principal */
+  .titulo-principal {
+    font-family: "Great Vibes", cursive;
+    color: #ff69b4;
+    font-size: 60px; 
+    text-align: center;
+    margin-bottom: 20px;
+    text-shadow: 3px 3px 6px #000000;
+  }
+  
+  /* Subtítulo */
+  .subtitulo {
+    font-family: "Great Vibes", cursive;
+    color: #ffffff;
+    font-size: 30px;
+    text-align: center;
+    margin-bottom: 40px;
+    text-shadow: 2px 2px 4px #000000;
+  }
+  
+  /* Secciones (Video, Fotos) */
+  .seccion-titulo {
+    font-family: "Great Vibes", cursive;
+    font-size: 40px;
+    color: #ff69b4;
+    text-align: center;
+    margin-bottom: 20px;
+  }
+  
+  .seccion-descripcion {
+    font-family: "Montserrat", sans-serif;
+    color: #fff;
+    text-align: center;
+    margin-bottom: 30px;
+    font-size: 18px;
+  }
+  
+  /*
+    ---------------------
+    POEMAS
+    ---------------------
+  */
+  
+  .poema {
+    background: rgba(0, 0, 0, 0.6);
+    padding: 25px;
+    border-radius: 10px;
+    margin-bottom: 20px;
+  }
+  
+  .poema h2 {
+    font-family: "Great Vibes", cursive;
+    color: #ff69b4;
+    font-size: 36px;
+    text-shadow: 1px 1px 2px #000000;
+    margin: 0 0 10px 0;
+  }
+  
+  .poema p {
+    font-family: "Montserrat", sans-serif;
+    color: #ffffff;
+    font-size: 20px;
+    margin: 0;
+  }
+  
+  /*
+    ---------------------
+    FOOTER (mensaje final)
+    ---------------------
+  */
+  
+  .footer {
+    font-family: "Great Vibes", cursive;
+    font-size: 36px;
+    color: #ff69b4;
+    text-align: center;
+    margin-top: 40px;
+    text-shadow: 3px 3px 6px #000000;
+  }
+  
+  /*
+    ---------------------
+    IMAGEN PRINCIPAL
+    ---------------------
+  */
+  
+  .imagen-princesa {
+    border: 5px solid #ff69b4; 
+    border-radius: 15px;
+    box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.5);
+    max-width: 100%;
+    height: auto;
+  }
+  
+  /*
+    ---------------------
+    GALERÍA DE FOTOS
+    ---------------------
+  */
+  
+  .galeria-fotos {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+  }
+  
+  .foto-card {
+    background: rgba(0,0,0,0.3);
+    padding: 5px;
+    border-radius: 8px;
+    max-width: 250px;
+  }
+  
+  .foto-card img {
+    width: 100%;
+    height: auto;
+    display: block;
+    border-radius: 8px;
+  }
+  
+  /*
+    ---------------------
+    VIDEOS (locales)
+    ---------------------
+  */
+  
+  .video-container {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+  }
+  
+  video {
+    border: 5px solid #ff69b4; 
+    border-radius: 10px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.5);
+    background-color: #000;
+  }
+  
+  /*
+    ---------------------
+    CORAZONES ANIMADOS
+    ---------------------
+  */
+  
+  .corazon {
+    position: fixed;
+    top: 0;
+    z-index: 9999;
+    user-select: none;
+    pointer-events: none;
+    opacity: 0.8;
+    animation-name: corazones-fall, corazones-shake;
+    animation-timing-function: linear, ease-in-out;
+    animation-iteration-count: infinite, infinite;
+  }
+  
+  /* Animaciones */
+  @keyframes corazones-fall {
+    0% {
+      top: -10%;
+    }
+    100% {
+      top: 100%;
+    }
+  }
+  
+  @keyframes corazones-shake {
+    0%,
+    100% {
+      transform: translateX(0);
+    }
+    50% {
+      transform: translateX(80px);
+    }
+  }
+  
+  /*
+    ---------------------
+    MEDIA QUERIES
+    ---------------------
+  */
+  
+  @media (max-width: 768px) {
+    /* Ajuste del sidebar en tablets/móviles grandes */
+    .sidebar {
+      width: 150px;
+    }
+    .container {
+      margin-left: 150px;
+    }
+  
+    .titulo-principal {
+      font-size: 40px;
+    }
+    .subtitulo {
+      font-size: 24px;
+    }
+    .poema h2 {
+      font-size: 28px;
+    }
+    .poema p {
+      font-size: 16px;
+    }
+    .footer {
+      font-size: 24px;
+      margin-top: 20px;
+    }
+    .seccion-titulo {
+      font-size: 30px;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    /* El sidebar se vuelve horizontal arriba (simple) */
+    .sidebar {
+      position: static;
+      width: 100%;
+      display: flex;
+      justify-content: center;
+    }
+  
+    .sidebar ul {
+      display: flex;
+      gap: 10px;
+    }
+  
+    .sidebar ul li {
+      margin: 0; /* Quitamos margen extra */
+    }
+  
+    .container {
+      margin-left: 0; 
+      padding: 10px;
+    }
+  
+    .titulo-principal {
+      font-size: 30px;
+      margin-bottom: 15px;
+    }
+    .subtitulo {
+      font-size: 20px;
+      margin-bottom: 30px;
+    }
+    .poema {
+      padding: 15px;
+    }
+    .poema h2 {
+      font-size: 24px;
+    }
+    .poema p {
+      font-size: 14px;
+    }
+    .footer {
+      font-size: 20px;
+      margin-top: 20px;
+    }
+    .seccion-titulo {
+      font-size: 24px;
+    }
+  
+    .video-container {
+      flex-direction: column;
+      align-items: center;
+    }
+  
+    video {
+      width: 100%;
+      height: auto;
+    }
+  }
+  
